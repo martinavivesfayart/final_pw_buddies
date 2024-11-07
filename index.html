@@ -229,15 +229,40 @@
           </ul>
         </div>
 
+
+        Tienes razón, el cierre del
+  </footer> no está claramente en la estructura que escribiste. Aquí está cómo debería verse el HTML completo para el
+  footer con el formulario de suscripción y el cierre correcto del footer:
+
+  html
+  Copiar código
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <!-- Enlaces Rápidos -->
+        <div class="col-lg-2 col-md-3 footer-links text-start">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
         <!-- Newsletter del Footer -->
-        <form id="newsletter-form">
-          <input type="email" id="user_email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
-        
-        <div id="success-message" style="display:none;">Thank you! We’ll be in touch with more information soon.</div>
-        <div id="error-message" style="display:none;">There was an error. Please try again later.</div>
-        
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Get More Information About Buddies</h4>
+          <p>Subscribe to receive information about us!</p>
+          <form id="newsletter-form">
+            <input type="email" id="user_email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <div id="success-message" style="display:none;">Thank you! We’ll be in touch with more information soon.</div>
+          <div id="error-message" style="display:none;">There was an error. Please try again later.</div>
+        </div>
+
       </div>
     </div>
   </footer>
@@ -246,34 +271,33 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("OOVRoLLbUFGexrrQa");  // Cambia "OOVRoLLbUFGexrrQa" por tu Public Key real de EmailJS si es distinta
+    emailjs.init("OOVRoLLbUFGexrrQa");  // Public Key de EmailJS
   })();
 
   document.getElementById('newsletter-form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Evita que el formulario se envíe de forma normal
+    event.preventDefault();  // Evita el envío normal del formulario
 
     // Enviar el correo usando EmailJS
     emailjs.send("service_bmpzwfy", "buddies_ehb8cda", {
-      user_email: document.getElementById("user_email").value,  // Toma el email del usuario
+      user_email: document.getElementById("user_email").value,  // Email del usuario
     })
     .then(function(response) {
-      // Muestra un mensaje de éxito
       document.getElementById("success-message").style.display = "block";
+      document.getElementById("error-message").style.display = "none";  // Oculta el mensaje de error si existía
     }, function(error) {
-      // Muestra un mensaje de error
       document.getElementById("error-message").style.display = "block";
+      document.getElementById("success-message").style.display = "none";  // Oculta el mensaje de éxito si existía
     });
   });
 </script>
 
-  <!-- Botón para abrir el carrito -->
-  <button type="button" class="btn btn-primary btn-cart-floating" data-bs-toggle="modal" data-bs-target="#carritoModal">
-    View Cart
-  </button>
+<!-- Botón para abrir el carrito -->
+<button type="button" class="btn btn-primary btn-cart-floating" data-bs-toggle="modal" data-bs-target="#carritoModal">
+  View Cart
+</button>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="main.js"></script>
+<!-- Bootstrap y otros scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 </body>
-
 </html>
