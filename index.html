@@ -230,18 +230,14 @@
         </div>
 
         <!-- Newsletter del Footer -->
-        <div class="footer-newsletter">
-          <h4>Get More Information About Buddies</h4>
-          <p>Subscribe to learn more about us and how we can make your experience unforgettable!</p>
-          <form id="newsletter-form">
-            <div class="newsletter-form">
-              <input type="email" id="user_email" name="email" placeholder="Enter your email" required>
-              <input type="submit" value="Subscribe">
-            </div>
-          </form>
-          <div id="success-message" style="display: none;">Thank you! We’ll be in touch with more information soon.</div>
-          <div id="error-message" style="display: none;">There was an error. Please try again later.</div>
-        </div>
+        <form id="newsletter-form">
+          <input type="email" id="user_email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        
+        <div id="success-message" style="display: none;">Thank you! We’ll be in touch with more information soon.</div>
+        <div id="error-message" style="display: none;">There was an error. Please try again later.</div>
+        
 
       </div>
     </div>
@@ -251,23 +247,19 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("OOVRoLLbUFGexrrQa");  // Reemplaza "OOVRoLLbUFGexrrQa" con tu Public Key si es diferente
+    emailjs.init("OOVRoLLbUFGexrrQa");  // Aquí va tu Public Key
   })();
 
   document.getElementById('newsletter-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     emailjs.send("service_bmpzwfy", "buddies_ehb8cda", {
-      user_email: document.getElementById("user_email").value,  // Captura el email ingresado en el formulario
+      user_email: document.getElementById("user_email").value,
     })
     .then(function(response) {
-      console.log("Correo enviado exitosamente", response);  // Éxito en el envío
-      document.getElementById("success-message").style.display = "block";  // Muestra mensaje de éxito
-      document.getElementById("error-message").style.display = "none";  // Oculta mensaje de error
+      document.getElementById("success-message").style.display = "block";
     }, function(error) {
-      console.error("Error al enviar el correo:", error);  // Muestra el error en la consola
-      document.getElementById("error-message").style.display = "block";  // Muestra mensaje de error
-      document.getElementById("success-message").style.display = "none";  // Oculta mensaje de éxito
+      document.getElementById("error-message").style.display = "block";
     });
   });
 </script>
