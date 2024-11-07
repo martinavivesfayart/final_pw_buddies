@@ -90,3 +90,18 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
     mostrarNotificacion(`¡${evento} ha sido agregado al carrito!`); // Muestra la notificación
   });
 });
+
+
+// Script para el botón de Checkout
+document.getElementById('checkout-button').addEventListener('click', function() {
+  // Verifica si el carrito tiene elementos
+  if (carrito.length > 0) {
+    // Mostrar el modal de agradecimiento
+    var thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+    thankYouModal.show();
+  } else {
+    // Mostrar el modal de carrito vacío
+    var emptyCartModal = new bootstrap.Modal(document.getElementById('emptyCartModal'));
+    emptyCartModal.show();
+  }
+});

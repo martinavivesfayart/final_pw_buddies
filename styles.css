@@ -8,9 +8,9 @@
 /* ========================
  Encabezado y Navegación
  ======================== */
-
-.header {
+ .header {
   background-color: #007BFF; /* Fondo azul para el encabezado */
+
   padding: 1rem;
   color: #fff; /* Texto blanco */
 }
@@ -31,6 +31,7 @@
 .nav ul li a:hover {
   text-decoration: underline; /* Subraya al pasar el cursor */
 }
+
 /* ========================
    Sección de Bienvenida
    ======================== */
@@ -421,4 +422,15 @@
 .notification.hidden {
   opacity: 0;
   transform: translateY(-20px);
+}
+
+/* boton checkput */
+
+.modal-header {
+  background-color: #4CAF50; /* Cambia el color del encabezado */
+  color: white; /* Cambia el color del texto */
+}
+
+.modal-body {
+  text-align: center; /* Centra el texto en el cuerpo del modal */
 }
