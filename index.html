@@ -251,22 +251,27 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("OOVRoLLbUFGexrrQa");  
+    emailjs.init("OOVRoLLbUFGexrrQa");  // Reemplaza "OOVRoLLbUFGexrrQa" con tu Public Key si es diferente
   })();
 
   document.getElementById('newsletter-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     emailjs.send("service_bmpzwfy", "buddies_ehb8cda", {
-      user_email: document.getElementById("user_email").value,
+      user_email: document.getElementById("user_email").value,  // Captura el email ingresado en el formulario
     })
     .then(function(response) {
-      document.getElementById("success-message").style.display = "block";
+      console.log("Correo enviado exitosamente", response);  // Éxito en el envío
+      document.getElementById("success-message").style.display = "block";  // Muestra mensaje de éxito
+      document.getElementById("error-message").style.display = "none";  // Oculta mensaje de error
     }, function(error) {
-      document.getElementById("error-message").style.display = "block";
+      console.error("Error al enviar el correo:", error);  // Muestra el error en la consola
+      document.getElementById("error-message").style.display = "block";  // Muestra mensaje de error
+      document.getElementById("success-message").style.display = "none";  // Oculta mensaje de éxito
     });
   });
 </script>
+
 
   <!-- Botón para abrir el carrito -->
   <button type="button" class="btn btn-primary btn-cart-floating" data-bs-toggle="modal" data-bs-target="#carritoModal">
