@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buddies ITBA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- Notificación de éxito al agregar al carrito -->
+<div id="notification" class="notification hidden">¡Producto agregado al carrito!</div>
+
+
+  <!-- Encabezado con navegación -->
+  <header class="header">
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección de Bienvenida -->
+  <section class="welcome-section text-center py-4">
+    <div class="container">
+      <h2 class="welcome-title">Welcome to Buddies</h2>
+      <p class="welcome-description">
+        We help you connect, explore, and make lifelong friends during your time in Buenos Aires
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Carrusel de Bienvenida -->
+  <section class="hero">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/carrusel/1.png" class="d-block w-100" alt="Welcome to Buddies ITBA">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/carrusel/2.png" class="d-block w-100" alt="Cultural Events">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/carrusel/3.png" class="d-block w-100" alt="Meet New Friends">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/carrusel/4.png" class="d-block w-100" alt="Meet New Friends">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+  </section>
+
+  <!-- Sección de Eventos con Tarjetas -->
+  <section id="events" class="section events">
+    <div class="container">
+      <h2 class="text-center my-4">Our Events</h2>
+      <div class="row">
+
+        <!-- Tarjeta de Evento 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="img/eventos/1.png" class="card-img-top" alt="Event 1">
+            <div class="card-body">
+              <h5 class="card-title">Tour por Buenos Aires</h5>
+              <p class="card-text">Discover iconic sights with fellow students and experience the city like a true
+                local.</p>
+
+              <p class="price">Price: $1500</p>
+              <button class="btn btn-primary add-to-cart" data-event="Tour por Buenos Aires" data-price="1500">Add to
+                Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Evento 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="img/eventos/2.png" class="card-img-top" alt="Event 2">
+            <div class="card-body">
+              <h5 class="card-title">Asado de Bienvenida</h5>
+              <p class="card-text">Join us for a classic Argentine barbecue! Great food, amazing people, and
+                unforgettable memories await.</p>
+              <p class="price">Price: $1800</p>
+              <button class="btn btn-primary add-to-cart" data-event="Asado de Bienvenida" data-price="1800">Add to
+                Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Evento 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="img/eventos/3.png" class="card-img-top" alt="Event 3">
+            <div class="card-body">
+              <h5 class="card-title">Fútbol Like a Local</h5>
+              <p class="card-text">Feel the thrill of Argentine fútbol! Cheer, chant, and experience the passion of
+                local fans.</p>
+
+              <p class="price">Price: $2000</p>
+              <button class="btn btn-primary add-to-cart" data-event="Fútbol Like a Local" data-price="2000">Add to
+                Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Evento 4 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="img/eventos/4.png" class="card-img-top" alt="Event 4">
+            <div class="card-body">
+              <h5 class="card-title">Cena de los Países</h5>
+              <p class="card-text">Bring a dish, taste flavors from around the world, and enjoy a global feast with
+                friends.</p>
+              <p class="price">Price: $1800</p>
+              <button class="btn btn-primary add-to-cart" data-event="Cena de los Países" data-price="1800">Add to
+                Cart</button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Tarjeta de Evento 5 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="img/eventos/5.png" class="card-img-top" alt="Event 5">
+            <div class="card-body">
+              <h5 class="card-title">Game Day!</h5>
+              <p class="card-text"> Board games, team challenges, and laughs for a perfect night with friends.</p>
+              <p class="price">Price: $1800</p>
+              <button class="btn btn-primary add-to-cart" data-event="Game Day" data-price="1800">Add to
+                Cart</button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Tarjeta de Evento 6 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="img/eventos/6.png" class="card-img-top" alt="Event 6">
+            <div class="card-body">
+              <h5 class="card-title">Previa & Night Club</h5>
+              <p class="card-text">Kick off the night with a pre-party and keep dancing at one of BA’s best clubs. Make
+                memories that last!</p>
+              <p class="price">Price: $1800</p>
+              <button class="btn btn-primary add-to-cart" data-event="Previa & Night Club" data-price="1800">Add to
+                Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal de Carrito -->
+<div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="carritoModalLabel">Shopping Cart</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <ul id="carrito-lista" class="list-group"></ul>
+              <p id="total-price" class="mt-3">Total: $0</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Checkout</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <!-- Sección "About" del Footer -->
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Buddies</span>
+          </a>
+          <div class="footer-contact pt-3 text-start">
+            <p>ITBA - Instituto Tecnológico de Buenos Aires</p>
+            <p>Buenos Aires, Argentina</p>
+            <p><strong>Email:</strong> <span>buddies@itba.edu.ar</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Enlaces Rápidos -->
+        <div class="col-lg-2 col-md-3 footer-links text-start">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter del Footer -->
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Get More Information About Buddies</h4>
+          <p>Subscribe to learn more about us and how we can make your experience unforgettable!</p>
+          <form action="forms/about.php" method="post">
+            <div class="newsletter-form">
+              <input type="email" name="email" placeholder="Enter your email" required>
+              <input type="submit" value="Subscribe">
+            </div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Thank you! We’ll be in touch with more information soon.</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Botón para abrir el carrito -->
+<button type="button" class="btn btn-primary btn-cart-floating" data-bs-toggle="modal" data-bs-target="#carritoModal">
+  View Cart
+</button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

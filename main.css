@@ -1,0 +1,424 @@
+/* Reset básico: Elimina márgenes y rellenos predeterminados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================
+ Encabezado y Navegación
+ ======================== */
+
+.header {
+  background-color: #007BFF; /* Fondo azul para el encabezado */
+  padding: 1rem;
+  color: #fff; /* Texto blanco */
+}
+
+.nav ul {
+  list-style: none; /* Elimina los puntos de lista */
+  display: flex;
+  gap: 2rem;
+  justify-content: center; /* Centra los elementos */
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold; /* Enlaces en negrita */
+}
+
+.nav ul li a:hover {
+  text-decoration: underline; /* Subraya al pasar el cursor */
+}
+/* ========================
+   Sección de Bienvenida
+   ======================== */
+
+   .welcome-section {
+    background-color: #f4f4f4; /* Fondo gris claro */
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+}
+
+.welcome-section .welcome-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.welcome-section .welcome-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+
+/* ============================
+ Carrusel en la Página Home
+ ============================ */
+
+.hero {
+  margin-top: 1rem; /* Espacio arriba del carrusel */
+}
+
+.carousel-caption h5 {
+  font-size: 2rem; /* Tamaño grande para el título del carrusel */
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem; /* Tamaño de fuente moderado para subtítulo */
+}
+
+/* ========================
+ Sección "About Us"
+ ======================== */
+
+.about-us {
+  padding: 4rem 0; /* Espaciado arriba y abajo */
+  background-color: #f8f9fa; /* Fondo gris claro */
+}
+
+.about-us .content {
+  padding: 1rem; /* Espaciado interno para el contenido */
+}
+
+.about-us .content p.fst-italic {
+  font-size: 1.1rem; /* Texto de introducción */
+  color: #555; /* Texto gris */
+}
+
+.about-us .content ul {
+  list-style: none; /* Elimina los puntos de lista */
+  padding-left: 0;
+}
+
+.about-us .content ul li {
+  margin-bottom: 1rem; /* Espacio entre elementos de la lista */
+  font-size: 1.1rem;
+  color: #333; /* Texto oscuro */
+}
+
+.about-us .content ul li i {
+  color: #007BFF; /* Íconos azules */
+  margin-right: 0.5rem;
+}
+
+
+/* ============================
+ Pie de Página
+ ============================ */
+
+.footer {
+  background-color: #007BFF; /* Fondo azul para el pie de página */
+  color: #fff; /* Texto blanco */
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer a {
+  color: #ffdd57; /* Enlaces de color amarillo */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Subraya al pasar el cursor */
+}
+
+/* ========================
+   Estilos del Footer
+   ======================== */
+
+   .footer {
+    background-color: #f8f9fa; /* Fondo gris claro */
+    padding: 3rem 0;
+    color: #333; /* Texto oscuro */
+    font-size: 0.9rem;
+}
+
+.footer .footer-top {
+    border-bottom: 1px solid #ddd; /* Línea separadora */
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer .logo .sitename {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.footer .footer-contact p {
+    margin: 0.5rem 0;
+    color: #555; /* Color de contacto */
+}
+
+.footer .social-links a {
+    font-size: 1.2rem;
+    color: #007BFF;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    color: #0056b3; /* Color más oscuro en hover */
+}
+
+/* Estilo para "Quick Links" */
+.footer .footer-links h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer .footer-links ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer .footer-links ul li a:hover {
+    color: #007BFF; /* Color azul en hover */
+}
+
+/* Estilos para la sección de Newsletter */
+.footer .footer-newsletter h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.footer .footer-newsletter p {
+    color: #555;
+}
+
+.footer .footer-newsletter .newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.footer .footer-newsletter input[type="email"] {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.footer .footer-newsletter input[type="submit"] {
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer .footer-newsletter input[type="submit"]:hover {
+    background-color: #0056b3; /* Color más oscuro en hover */
+}
+
+/* ========================
+   Animaciones del Formulario
+   ======================== */
+
+.php-email-form .loading, .php-email-form .error-message, .php-email-form .sent-message {
+    display: none;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+}
+
+.php-email-form .loading {
+    color: #007BFF;
+}
+
+.php-email-form .error-message {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.php-email-form .sent-message {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* ========================
+   Título de la Página
+   ======================== */
+
+   .page-title {
+    background-color: #f4f4f4; /* Fondo gris claro */
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.page-title p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.breadcrumbs ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.breadcrumbs ol li {
+    color: #007BFF;
+}
+
+.breadcrumbs ol li.current {
+    color: #333; /* Página actual en gris */
+}
+
+/* ========================
+   Sección de Contacto
+   ======================== */
+
+.contact {
+    padding: 4rem 0;
+}
+
+/* Información de Contacto */
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-right: 1rem;
+}
+
+.info-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+/* Formulario de Contacto */
+.php-email-form .form-control {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.php-email-form .form-control:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Botón Enviar */
+.php-email-form button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.php-email-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Mensajes de Envío */
+.php-email-form .loading, .php-email-form .error-message, .php-email-form .sent-message {
+    display: none;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+}
+
+.php-email-form .loading {
+    color: #007BFF;
+}
+
+.php-email-form .error-message {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.php-email-form .sent-message {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* CARRITOOOOOOO  */
+/* Botón flotante del carrito */
+.btn-cart-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cart-floating:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para la notificación de carrito */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-20px);
+  z-index: 1000;
+}
+
+.notification.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+}
