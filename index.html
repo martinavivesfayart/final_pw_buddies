@@ -246,24 +246,25 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("OOVRoLLbUFGexrrQa");  // Reemplaza con tu Public Key de EmailJS
+    emailjs.init("OOVRoLLbUFGexrrQa");  // Cambia "OOVRoLLbUFGexrrQa" por tu Public Key real de EmailJS si es distinta
   })();
 
   document.getElementById('newsletter-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault();  // Evita que el formulario se envíe de forma normal
 
+    // Enviar el correo usando EmailJS
     emailjs.send("service_bmpzwfy", "buddies_ehb8cda", {
-      user_email: document.getElementById("user_email").value,
+      user_email: document.getElementById("user_email").value,  // Toma el email del usuario
     })
     .then(function(response) {
+      // Muestra un mensaje de éxito
       document.getElementById("success-message").style.display = "block";
     }, function(error) {
+      // Muestra un mensaje de error
       document.getElementById("error-message").style.display = "block";
     });
   });
 </script>
-
-
 
   <!-- Botón para abrir el carrito -->
   <button type="button" class="btn btn-primary btn-cart-floating" data-bs-toggle="modal" data-bs-target="#carritoModal">
