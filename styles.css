@@ -434,3 +434,18 @@
 .modal-body {
   text-align: center; /* Centra el texto en el cuerpo del modal */
 }
+
+
+/* lo del subscribe */
+
+#mc_embed_signup {
+  background: #fff; /* Fondo blanco para el formulario */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+#mc_embed_signup input {
+  width: 100%; /* Ancho completo para los campos */
+  padding: 10px; /* Espaciado interno */
+  margin: 5px 0; /* Margen entre campos */
+}
