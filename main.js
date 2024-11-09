@@ -91,11 +91,14 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
   });
 });
 
-
 // Script para el botón de Checkout
 document.getElementById('checkout-button').addEventListener('click', function() {
   // Verifica si el carrito tiene elementos
   if (carrito.length > 0) {
+    // Vacía el carrito
+    carrito = []; 
+    actualizarCarrito(); // Actualiza la visualización del carrito
+
     // Mostrar el modal de agradecimiento
     var thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
     thankYouModal.show();

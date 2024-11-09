@@ -54,6 +54,24 @@
     margin-top: 0.5rem;
 }
 
+/* titulo de events */
+.events .welcome-title { 
+  font-size: 2rem; 
+  font-weight: bold; 
+  color: #333;
+}
+
+/* de contacto */
+.welcome-title {
+  font-size: 2rem;              /* Tamaño de fuente grande */
+  font-weight: bold;            /* Negrita */
+  color: #333;                  /* Color gris oscuro */
+  text-align: center;           /* Centrado */
+  margin-bottom: 1rem;          /* Espacio debajo del título */
+}
+
+
+
 
 /* ============================
  Carrusel en la Página Home
@@ -120,12 +138,12 @@
 }
 
 .footer a {
-  color: #ffdd57; /* Enlaces de color amarillo */
+  color: #555; /* Cambia este color si no lo quieres más */
   text-decoration: none;
 }
 
 .footer a:hover {
-  text-decoration: underline; /* Subraya al pasar el cursor */
+  text-decoration: underline;
 }
 
 /* ========================
@@ -139,6 +157,7 @@
     font-size: 0.9rem;
 }
 
+/* Estilo para el título de los enlaces */
 .footer .footer-top {
     border-bottom: 1px solid #ddd; /* Línea separadora */
     padding-bottom: 2rem;
@@ -151,20 +170,27 @@
     color: #007BFF;
 }
 
+/* Estilo para la sección de contacto */
 .footer .footer-contact p {
     margin: 0.5rem 0;
     color: #555; /* Color de contacto */
 }
 
-.footer .social-links a {
-    font-size: 1.2rem;
-    color: #007BFF;
-    margin-right: 1rem;
+/* Estilo para los enlaces de la sección de contacto */
+.footer .footer-contact a {
+    color: #555; /* Color base */
+    text-decoration: none; /* Elimina el subrayado */
     transition: color 0.3s ease;
 }
 
-.footer .social-links a:hover {
-    color: #0056b3; /* Color más oscuro en hover */
+/* Estilo cuando pasas el ratón por encima de los enlaces de contacto */
+.footer .footer-contact a:hover {
+    color: #007BFF; /* Color azul en hover */
+}
+
+/* Estilo para los iconos de contacto */
+.contact-icon {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
 }
 
 /* Estilo para "Quick Links" */
@@ -194,45 +220,29 @@
     color: #007BFF; /* Color azul en hover */
 }
 
-/* Estilos para la sección de Newsletter */
 .footer .footer-newsletter h4 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-.footer .footer-newsletter p {
-    color: #555;
+/* Estilo para los enlaces de contacto (correo e Instagram) */
+.contact-link {
+    color: #555; /* Mismo color que los enlaces en "Quick Links" */
+    text-decoration: none; /* Elimina el subrayado */
+    transition: color 0.3s; /* Transición suave al cambiar el color */
+    margin-bottom: 10px; /* Añadido margen entre los enlaces */
+    display: block; /* Para que los enlaces estén uno debajo del otro */
 }
 
-.footer .footer-newsletter .newsletter-form {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
+/* Estilo cuando pasas el ratón por encima de los enlaces de contacto */
+.contact-link:hover {
+    color: #007BFF; /* Color azul cuando pasas el ratón, igual que en "Quick Links" */
 }
 
-.footer .footer-newsletter input[type="email"] {
-    flex: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
 
-.footer .footer-newsletter input[type="submit"] {
-    padding: 0.5rem 1rem;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-.footer .footer-newsletter input[type="submit"]:hover {
-    background-color: #0056b3; /* Color más oscuro en hover */
-}
 
 /* ========================
    Animaciones del Formulario
@@ -433,6 +443,15 @@
 
 .modal-body {
   text-align: center; /* Centra el texto en el cuerpo del modal */
+}
+
+.modal-content {
+  background-color: #f8f9fa; /* Fondo claro */
+  border: 1px solid #007BFF; /* Bordes azules */
+}
+.modal-header {
+  background-color: #007BFF; /* Fondo azul para el encabezado */
+  color: #fff; /* Texto blanco */
 }
 
 
