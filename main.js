@@ -87,7 +87,7 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
     const evento = button.getAttribute('data-event');
     const precio = button.getAttribute('data-price');
     agregarAlCarrito(evento, precio);
-    mostrarNotificacion(`¡${evento} ha sido agregado al carrito!`); // Muestra la notificación
+    mostrarNotificacion(`¡${evento} added to cart!`); 
   });
 });
 
