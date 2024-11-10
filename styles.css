@@ -38,6 +38,16 @@
   text-decoration: underline; /* Subraya al pasar el cursor */
 }
 
+.nav a {
+  position: relative;
+  z-index: 10;
+}
+.modal-backdrop {
+  pointer-events: none;
+}
+
+
+
 /* ========================
    Sección de Bienvenida
    ======================== */
