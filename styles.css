@@ -41,12 +41,12 @@
 .nav a {
   position: relative;
   z-index: 10;
+  padding: 10px 20px;
+  font-size: 16px;
 }
 .modal-backdrop {
   pointer-events: none;
 }
-
-
 
 /* ========================
    Sección de Bienvenida
