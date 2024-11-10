@@ -439,3 +439,29 @@
   padding: 10px; 
   margin: 5px 0; 
 }
+
+
+/* events*/
+/* Asegura que las tarjetas estén alineadas y con buen espaciado en tabletas */
+@media (min-width: 768px) {
+  .events .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Asegura espacio entre tarjetas */
+  }
+}
+
+/* Asegura que las tarjetas no se desborden en tabletas */
+@media (max-width: 1024px) {
+  .card {
+    width: 100% !important;  /* Las tarjetas ocuparán todo el ancho en tabletas */
+    margin-bottom: 1rem;
+  }
+}
+
+/* En pantallas más grandes (desktop) */
+@media (min-width: 1200px) {
+  .card {
+    width: 100%;
+  }
+}
