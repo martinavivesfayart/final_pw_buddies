@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link href="img/logo_buddies.png" rel="icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
 
@@ -194,62 +195,64 @@
     </div>
   </div>
 
-
-  <!-- Modal de Agradecimiento -->
-  <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="thankYouModalLabel">Thank You!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Thank you for your purchase! Your cart has been emptied.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
+<!-- Modal de Agradecimiento -->
+<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="thankYouModalLabel">Thank You for Your Purchase!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Your order has been placed successfully!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Modal de Carrito Vacío -->
-  <div class="modal fade" id="emptyCartModal" tabindex="-1" aria-labelledby="emptyCartModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="emptyCartModalLabel">Cart is Empty</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Your cart is empty. Please add items before checking out.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
+<!-- Modal de Carrito Vacío -->
+<div class="modal fade" id="emptyCartModal" tabindex="-1" aria-labelledby="emptyCartModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="emptyCartModalLabel">Your Cart is Empty</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Please add some items to your cart.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>
 
 
-  <!-- Footer -->
   <footer id="footer" class="footer position-relative light-background">
     <div class="container footer-top">
       <div class="row gy-4">
-
-        <!-- Sección "About" del Footer -->
+        <!-- Sección de Información de Contacto -->
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">Buddies</span>
           </a>
-          <div class="footer-contact pt-3 text-start">
+          <div class="footer-contact pt-3">
             <p>ITBA - Instituto Tecnológico de Buenos Aires</p>
             <p>Buenos Aires, Argentina</p>
+            <p><strong>Email:</strong> <span>buddies@itba.edu.ar</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.instagram.com/buddiesitba" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/buddies-itba" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
-        <!-- Enlaces Rápidos -->
-        <div class="col-lg-2 col-md-3 footer-links text-start">
+        <!-- Sección de Enlaces Rápidos -->
+        <div class="col-lg-2 col-md-3 footer-links">
           <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html" class="active">Home</a></li>
@@ -257,55 +260,20 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
-        <!-- Info del Footer -->
-        <div class="col-lg-4 col-md-3 footer-newsletter text-start">
-          <h4>Get More Information</h4>
-          <a href="mailto:buddies@itba.edu.ar" class="contact-link me-3">
-            <img src="https://img.icons8.com/material-outlined/24/000000/new-post.png" alt="Email Icon"
-              class="contact-icon">
-            buddies@itba.edu.ar
-          </a>
-          <h4>Follow us on Instagram!</h4>
-          <!-- Instagram con icono -->
-          <a href="https://www.instagram.com/buddiesitba/" class="contact-link">
-            <img src="https://img.icons8.com/material-outlined/24/000000/instagram-new.png" alt="Instagram Icon"
-              class="contact-icon">
-            @buddiesitba
-          </a>
-        </div>
-
-
-
       </div>
     </div>
   </footer>
+
 
   <!-- Botón para abrir el carrito -->
   <button type="button" class="btn btn-primary btn-cart-floating" data-bs-toggle="modal" data-bs-target="#carritoModal">
     View Cart
   </button>
 
-  <!-- Script para el botón de Checkout -->
-  <script>
-    document.getElementById('checkout-button').addEventListener('click', function () {
-      // Verifica si el carrito tiene elementos
-      if (carrito.length > 0) {
-        // Mostrar el modal de agradecimiento
-        var thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
-        thankYouModal.show();
-      } else {
-        // Mostrar el modal de carrito vacío
-        var emptyCartModal = new bootstrap.Modal(document.getElementById('emptyCartModal'));
-        emptyCartModal.show();
-      }
-    });
-  </script>
-
-
   <!-- Bootstrap y otros scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="main.js"></script>
 </body>
+
 
 </html>

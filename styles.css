@@ -10,9 +10,15 @@
  ======================== */
  .header {
   background-color: #007BFF; /* Fondo azul para el encabezado */
-
+  text-align: center;  /* Centra el contenido de texto */
   padding: 1rem;
   color: #fff; /* Texto blanco */
+}
+
+.nav {
+  display: flex;
+  justify-content: center;  /* Centra los elementos del menú */
+  align-items: center;  /* Centra los elementos verticalmente */
 }
 
 .nav ul {
@@ -125,150 +131,136 @@
 }
 
 
-/* ============================
- Pie de Página
- ============================ */
-
-.footer {
-  background-color: #007BFF; /* Fondo azul para el pie de página */
-  color: #fff; /* Texto blanco */
-  padding: 1rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.footer a {
-  color: #555; /* Cambia este color si no lo quieres más */
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
 /* ========================
    Estilos del Footer
    ======================== */
 
    .footer {
-    background-color: #f8f9fa; /* Fondo gris claro */
-    padding: 3rem 0;
-    color: #333; /* Texto oscuro */
-    font-size: 0.9rem;
-}
-
-/* Estilo para el título de los enlaces */
-.footer .footer-top {
-    border-bottom: 1px solid #ddd; /* Línea separadora */
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer .logo .sitename {
-    font-size: 1.5rem;
+    color: var(--default-color);
+    background-color: #e1ecf6;
+    font-size: 14px;
+    padding-bottom: 50px;
+    position: relative;
+  }
+  
+  .footer .footer-top {
+    padding-top: 50px;
+  }
+  
+  .footer .footer-about .logo {
+    margin-bottom: 0;
+  }
+  
+  .footer .footer-about .logo img {
+    max-height: 40px;
+    margin-right: 6px;
+  }
+  
+  .footer .footer-about .logo span {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+  }
+  
+  .footer .footer-about p {
+    font-size: 14px;
+    font-family: var(--heading-font);
+  }
+  
+  .footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+    font-size: 16px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    margin-right: 10px;
+    transition: 0.3s;
+  }
+  
+  .footer .social-links a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  
+  .footer h4 {
+    font-size: 16px;
     font-weight: bold;
-    color: #007BFF;
-}
-
-/* Estilo para la sección de contacto */
-.footer .footer-contact p {
-    margin: 0.5rem 0;
-    color: #555; /* Color de contacto */
-}
-
-/* Estilo para los enlaces de la sección de contacto */
-.footer .footer-contact a {
-    color: #555; /* Color base */
-    text-decoration: none; /* Elimina el subrayado */
-    transition: color 0.3s ease;
-}
-
-/* Estilo cuando pasas el ratón por encima de los enlaces de contacto */
-.footer .footer-contact a:hover {
-    color: #007BFF; /* Color azul en hover */
-}
-
-/* Estilo para los iconos de contacto */
-.contact-icon {
-    margin-right: 10px; /* Espacio entre el icono y el texto */
-}
-
-/* Estilo para "Quick Links" */
-.footer .footer-links h4 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-.footer .footer-links ul {
+    position: relative;
+    padding-bottom: 12px;
+  }
+  
+  .footer .footer-links {
+    margin-bottom: 30px;
+  }
+  
+  .footer .footer-links ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+  }
+  
+  .footer .footer-links ul i {
+    padding-right: 2px;
+    font-size: 12px;
+    line-height: 0;
+  }
+  
+  .footer .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer .footer-links ul li:first-child {
+    padding-top: 0;
+  }
+  
+  .footer .footer-links ul a {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .footer .footer-links ul a:hover {
+    color: var(--accent-color);
+  }
+  
+  .footer .footer-contact p {
+    margin-bottom: 5px;
+  }
+  
+  .footer .footer-top .row {
+    display: flex;  /* Usa flexbox para alinear las columnas horizontalmente */
+    justify-content: space-between;  /* Distribuye el espacio de manera uniforme */
+    flex-wrap: wrap;  /* Permite que las columnas se ajusten en pantallas más pequeñas */
+  }
+  
+  .footer .footer-about, 
+  .footer .footer-links, 
+  .footer .footer-newsletter {
+    padding: 10px;  /* Agrega un poco de separación entre las secciones */
+  }
+  
+  .footer .footer-about {
+    max-width: 33.33%;  /* La sección de información de contacto ocupa un tercio del espacio */
+  }
+  
+  .footer .footer-links {
+    max-width: 33.33%;  /* Los enlaces rápidos ocupan un tercio del espacio */
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
 }
 
-.footer .footer-links ul li {
-    margin-bottom: 0.5rem;
-}
+  
 
-.footer .footer-links ul li a {
-    color: #555;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer .footer-links ul li a:hover {
-    color: #007BFF; /* Color azul en hover */
-}
-
-.footer .footer-newsletter h4 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-/* Estilo para los enlaces de contacto (correo e Instagram) */
-.contact-link {
-    color: #555; /* Mismo color que los enlaces en "Quick Links" */
-    text-decoration: none; /* Elimina el subrayado */
-    transition: color 0.3s; /* Transición suave al cambiar el color */
-    margin-bottom: 10px; /* Añadido margen entre los enlaces */
-    display: block; /* Para que los enlaces estén uno debajo del otro */
-}
-
-/* Estilo cuando pasas el ratón por encima de los enlaces de contacto */
-.contact-link:hover {
-    color: #007BFF; /* Color azul cuando pasas el ratón, igual que en "Quick Links" */
-}
-
-
-
-
-/* ========================
-   Animaciones del Formulario
-   ======================== */
-
-.php-email-form .loading, .php-email-form .error-message, .php-email-form .sent-message {
-    display: none;
-    font-size: 0.9rem;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border-radius: 4px;
-}
-
-.php-email-form .loading {
-    color: #007BFF;
-}
-
-.php-email-form .error-message {
-    background: #f8d7da;
-    color: #721c24;
-}
-
-.php-email-form .sent-message {
-    background: #d4edda;
-    color: #155724;
-}
 
 /* ========================
    Título de la Página
