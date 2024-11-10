@@ -1,4 +1,3 @@
-/* Reset básico: Elimina márgenes y rellenos predeterminados */
 * {
   margin: 0;
   padding: 0;
@@ -9,43 +8,60 @@
  Encabezado y Navegación
  ======================== */
  .header {
-  background-color: #007BFF; /* Fondo azul para el encabezado */
-  text-align: center;  /* Centra el contenido de texto */
+  background-color: #007BFF; 
+  text-align: center;  
   padding: 1rem;
-  color: #fff; /* Texto blanco */
+  color: #fff;
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 .nav {
   display: flex;
-  justify-content: center;  /* Centra los elementos del menú */
-  align-items: center;  /* Centra los elementos verticalmente */
+  justify-content: space-around; 
+  justify-content: center;  
+  align-items: center;  
+  z-index: 10;
+  width: 100%;
 }
 
 .nav ul {
-  list-style: none; /* Elimina los puntos de lista */
+  list-style: none;
   display: flex;
   gap: 2rem;
-  justify-content: center; /* Centra los elementos */
+  justify-content: center;
+  width: 100%;
 }
 
 .nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold; /* Enlaces en negrita */
+  font-weight: bold; 
 }
 
 .nav ul li a:hover {
-  text-decoration: underline; /* Subraya al pasar el cursor */
+  text-decoration: underline; 
 }
 
 .nav a {
   position: relative;
   z-index: 10;
-  font-size: 16px;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .modal-backdrop {
   pointer-events: none;
+}
+/* Media query para ajustar el menú en dispositivos pequeños */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .nav ul li {
+    margin: 5px 0; 
+  }
 }
 
 /* ========================
@@ -53,7 +69,7 @@
    ======================== */
 
    .welcome-section {
-    background-color: #f4f4f4; /* Fondo gris claro */
+    background-color: #f4f4f4;
     padding: 2rem 0;
     margin-bottom: 1rem;
 }
@@ -79,14 +95,12 @@
 
 /* de contacto */
 .welcome-title {
-  font-size: 2rem;              /* Tamaño de fuente grande */
-  font-weight: bold;            /* Negrita */
-  color: #333;                  /* Color gris oscuro */
-  text-align: center;           /* Centrado */
-  margin-bottom: 1rem;          /* Espacio debajo del título */
+  font-size: 2rem;            
+  font-weight: bold;            
+  color: #333;                  
+  text-align: center;           
+  margin-bottom: 1rem;          
 }
-
-
 
 
 /* ============================
@@ -94,16 +108,16 @@
  ============================ */
 
 .hero {
-  margin-top: 1rem; /* Espacio arriba del carrusel */
+  margin-top: 1rem; 
 }
 
 .carousel-caption h5 {
-  font-size: 2rem; /* Tamaño grande para el título del carrusel */
+  font-size: 2rem; 
   font-weight: bold;
 }
 
 .carousel-caption p {
-  font-size: 1.25rem; /* Tamaño de fuente moderado para subtítulo */
+  font-size: 1.25rem; 
 }
 
 /* ========================
@@ -111,32 +125,32 @@
  ======================== */
 
 .about-us {
-  padding: 4rem 0; /* Espaciado arriba y abajo */
-  background-color: #f8f9fa; /* Fondo gris claro */
+  padding: 4rem 0; 
+  background-color: #f8f9fa; 
 }
 
 .about-us .content {
-  padding: 1rem; /* Espaciado interno para el contenido */
+  padding: 1rem;
 }
 
 .about-us .content p.fst-italic {
-  font-size: 1.1rem; /* Texto de introducción */
-  color: #555; /* Texto gris */
+  font-size: 1.1rem; 
+  color: #555; 
 }
 
 .about-us .content ul {
-  list-style: none; /* Elimina los puntos de lista */
+  list-style: none; 
   padding-left: 0;
 }
 
 .about-us .content ul li {
-  margin-bottom: 1rem; /* Espacio entre elementos de la lista */
+  margin-bottom: 1rem; 
   font-size: 1.1rem;
-  color: #333; /* Texto oscuro */
+  color: #333; 
 }
 
 .about-us .content ul li i {
-  color: #007BFF; /* Íconos azules */
+  color: #007BFF; 
   margin-right: 0.5rem;
 }
 
@@ -246,30 +260,28 @@
   }
   
   .footer .footer-top .row {
-    display: flex;  /* Usa flexbox para alinear las columnas horizontalmente */
-    justify-content: space-between;  /* Distribuye el espacio de manera uniforme */
-    flex-wrap: wrap;  /* Permite que las columnas se ajusten en pantallas más pequeñas */
+    display: flex; 
+    justify-content: space-between;  
+    flex-wrap: wrap;  
   }
   
   .footer .footer-about, 
   .footer .footer-links, 
   .footer .footer-newsletter {
-    padding: 10px;  /* Agrega un poco de separación entre las secciones */
+    padding: 10px; 
   }
   
   .footer .footer-about {
-    max-width: 33.33%;  /* La sección de información de contacto ocupa un tercio del espacio */
+    max-width: 33.33%;  
   }
   
   .footer .footer-links {
-    max-width: 33.33%;  /* Los enlaces rápidos ocupan un tercio del espacio */
+    max-width: 33.33%;  
   }
   footer {
     display: flex;
     justify-content: space-between;
 }
-
-  
 
 
 /* ========================
@@ -277,7 +289,7 @@
    ======================== */
 
    .page-title {
-    background-color: #f4f4f4; /* Fondo gris claro */
+    background-color: #f4f4f4; 
     padding: 3rem 0;
     text-align: center;
 }
@@ -307,7 +319,7 @@
 }
 
 .breadcrumbs ol li.current {
-    color: #333; /* Página actual en gris */
+    color: #333; 
 }
 
 /* ========================
@@ -338,55 +350,6 @@
     margin-bottom: 0.3rem;
 }
 
-/* Formulario de Contacto */
-.php-email-form .form-control {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.php-email-form .form-control:focus {
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-}
-
-/* Botón Enviar */
-.php-email-form button[type="submit"] {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    cursor: pointer;
-}
-
-.php-email-form button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* Mensajes de Envío */
-.php-email-form .loading, .php-email-form .error-message, .php-email-form .sent-message {
-    display: none;
-    font-size: 0.9rem;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border-radius: 4px;
-}
-
-.php-email-form .loading {
-    color: #007BFF;
-}
-
-.php-email-form .error-message {
-    background: #f8d7da;
-    color: #721c24;
-}
-
-.php-email-form .sent-message {
-    background: #d4edda;
-    color: #155724;
-}
 
 /* CARRITOOOOOOO  */
 /* Botón flotante del carrito */
@@ -439,34 +402,34 @@
 /* boton checkput */
 
 .modal-header {
-  background-color: #4CAF50; /* Cambia el color del encabezado */
-  color: white; /* Cambia el color del texto */
+  background-color: #4CAF50;
+  color: white; 
 }
 
 .modal-body {
-  text-align: center; /* Centra el texto en el cuerpo del modal */
+  text-align: center;
 }
 
 .modal-content {
-  background-color: #f8f9fa; /* Fondo claro */
-  border: 1px solid #007BFF; /* Bordes azules */
+  background-color: #f8f9fa; 
+  border: 1px solid #007BFF; 
 }
 .modal-header {
-  background-color: #007BFF; /* Fondo azul para el encabezado */
-  color: #fff; /* Texto blanco */
+  background-color: #007BFF; 
+  color: #fff; 
 }
 
 
 /* lo del subscribe */
 
 #mc_embed_signup {
-  background: #fff; /* Fondo blanco para el formulario */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
+  background: #fff; 
+  padding: 20px; 
+  border-radius: 5px; 
 }
 
 #mc_embed_signup input {
-  width: 100%; /* Ancho completo para los campos */
-  padding: 10px; /* Espaciado interno */
-  margin: 5px 0; /* Margen entre campos */
+  width: 100%; 
+  padding: 10px; 
+  margin: 5px 0; 
 }
