@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* ========================
  Encabezado y Navegación
  ======================== */
@@ -12,24 +11,26 @@
   text-align: center;  
   padding: 1rem;
   color: #fff;
-  width: 100%; 
-  box-sizing: border-box; 
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .nav {
   display: flex;
-  justify-content: space-around; 
   justify-content: center;  
   align-items: center;  
-  z-index: 10;
+  z-index: 1000;
   width: 100%;
+  margin-top: 10px; /* Ajuste de espacio superior */
 }
 
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;  /* Reduce el espacio entre los enlaces */
   justify-content: center;
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
 
@@ -37,10 +38,12 @@
   color: #fff;
   text-decoration: none;
   font-weight: bold; 
+  font-size: 1.2rem;  /* Ajuste del tamaño de la fuente */
 }
 
 .nav ul li a:hover {
   text-decoration: underline; 
+  color: #FFD700; /* Color dorado al pasar el cursor */
 }
 
 .nav a {
@@ -53,16 +56,19 @@
 .modal-backdrop {
   pointer-events: none;
 }
+
 /* Media query para ajustar el menú en dispositivos pequeños */
 @media (max-width: 768px) {
   .nav ul {
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;  /* Ajuste de espacio entre los enlaces */
   }
   .nav ul li {
-    margin: 5px 0; 
+    margin: 5px 0;
   }
 }
+
 
 /* ========================
    Sección de Bienvenida
@@ -377,7 +383,7 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #007BFF;
+  background-color: #62a764;
   color: #fff;
   padding: 1rem 1.5rem;
   border-radius: 8px;
