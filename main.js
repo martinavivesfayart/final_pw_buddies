@@ -90,25 +90,21 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
     mostrarNotificacion(`¡${evento} ha sido agregado al carrito!`); // Muestra la notificación
   });
 });
+
 // Script para el botón de Checkout
 document.getElementById('checkout-button').addEventListener('click', function() {
   // Verifica si el carrito tiene elementos
   if (carrito.length > 0) {
+    // Vacía el carrito
+    carrito = []; 
+    actualizarCarrito();  // Asegúrate de tener esta función para actualizar la vista del carrito
+
     // Mostrar el modal de agradecimiento
     var thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'), {
       backdrop: 'static',  // Fondo oscuro, pero no interactuable
       keyboard: false // Evita que el modal se cierre con escape
     });
     thankYouModal.show();
-
-    // Al cerrar el modal, restaurar el fondo
-    thankYouModal._element.addEventListener('hidden.bs.modal', function () {
-      document.body.style.overflow = ''; // Restablecer el scroll
-      let backdrop = document.querySelector('.modal-backdrop');
-      if (backdrop) {
-        backdrop.remove(); // Eliminar el fondo oscuro manualmente
-      }
-    });
   } else {
     // Mostrar el modal de carrito vacío
     var emptyCartModal = new bootstrap.Modal(document.getElementById('emptyCartModal'), {
@@ -116,14 +112,5 @@ document.getElementById('checkout-button').addEventListener('click', function() 
       keyboard: false // Evita que el modal se cierre con escape
     });
     emptyCartModal.show();
-
-    // Al cerrar el modal, restaurar el fondo
-    emptyCartModal._element.addEventListener('hidden.bs.modal', function () {
-      document.body.style.overflow = ''; // Restablecer el scroll
-      let backdrop = document.querySelector('.modal-backdrop');
-      if (backdrop) {
-        backdrop.remove(); // Eliminar el fondo oscuro manualmente
-      }
-    });
   }
 });
