@@ -16,26 +16,38 @@
   <!-- Notificación de éxito al agregar al carrito -->
   <div id="notification" class="notification hidden">Product added to cart!</div>
 
-<!-- Encabezado con navegación -->
-<header class="header">
-  <nav class="nav">
-    <div class="logo">
-      <a href="index.html">MyWebsite</a>
-    </div>
-    <div class="menu-toggle" id="menu-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
 
-
+  <!-- Encabezado con navegación -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #007BFF;">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel" style="background-color: #0004ff;">
+          <div class="offcanvas-header" style="background-color: #007BFF;">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body" style="background-color:#007BFF;">
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
   <!-- Sección de Bienvenida -->
   <section class="welcome-section text-center py-4">
@@ -204,41 +216,41 @@
     </div>
   </div>
 
-<!-- Modal de Agradecimiento -->
-<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="thankYouModalLabel">Thank You for Your Purchase! 🎉</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Your order has been placed successfully! 🛍️
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  <!-- Modal de Agradecimiento -->
+  <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="thankYouModalLabel">Thank You for Your Purchase! 🎉</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Your order has been placed successfully! 🛍️
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Modal de Carrito Vacío -->
-<div class="modal fade" id="emptyCartModal" tabindex="-1" aria-labelledby="emptyCartModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="emptyCartModalLabel">Your Cart is Empty 😕</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Please add some items to your cart to continue shopping ➕🛒
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  <!-- Modal de Carrito Vacío -->
+  <div class="modal fade" id="emptyCartModal" tabindex="-1" aria-labelledby="emptyCartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="emptyCartModalLabel">Your Cart is Empty 😕</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Please add some items to your cart to continue shopping ➕🛒
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
   <footer id="footer" class="footer position-relative light-background">
@@ -280,14 +292,15 @@
   </button>
 
   <!-- Bootstrap y otros scripts -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="main.js"></script>
 
-<!-- para el coso de hamburguesa -->
+  <!-- para el coso de hamburguesa -->
   <script>
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
-  
+
     menuToggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
     });

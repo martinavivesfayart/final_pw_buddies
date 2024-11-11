@@ -63,6 +63,8 @@
     height: 4px;
     background-color: #fff;
   }
+
+  
   
 
   @media (max-width: 768px) {
@@ -85,10 +87,13 @@
    Sección de Bienvenida
    ======================== */
 
+
    .welcome-section {
     background-color: #f4f4f4;
     padding: 2rem 0;
     margin-bottom: 1rem;
+    margin-top: 80px; 
+
 }
 
 .welcome-section .welcome-title {
@@ -136,6 +141,48 @@
 .carousel-caption p {
   font-size: 1.25rem; 
 }
+
+
+/* ============================
+   Carrusel en Home
+============================ */
+.hero {
+  margin-top: 1rem;
+}
+
+/* Estilos para pantallas grandes */
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .carousel-caption h5 {
+    font-size: 1.5rem; /* Aumenta el tamaño del título en móviles */
+  }
+
+  .carousel-caption p {
+    font-size: 1rem; /* Aumenta el tamaño del texto en móviles */
+  }
+
+  .carousel-item img {
+    height: auto;
+    max-height: 60vh; /* Limita la altura de la imagen para evitar que ocupe demasiado espacio */
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el ancho */
+  }
+
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Añade un fondo semi-transparente detrás del texto */
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
 
 /* ========================
  Sección "About Us"
@@ -320,6 +367,10 @@
 .page-title p {
     color: #555;
     font-size: 1.1rem;
+}
+
+.page-section {
+  margin-top: 80px; 
 }
 
 .breadcrumbs ol {
