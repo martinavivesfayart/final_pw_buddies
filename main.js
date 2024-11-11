@@ -81,6 +81,8 @@ function mostrarNotificacion(mensaje) {
   }, 3000);
 }
 
+
+
 // Event listener para los botones "Add to Cart"
 document.querySelectorAll('.add-to-cart').forEach(button => {
   button.addEventListener('click', () => {

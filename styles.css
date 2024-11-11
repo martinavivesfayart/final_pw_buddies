@@ -441,31 +441,34 @@
 }
 
 /* Estilos para la notificación de carrito */
-.notification {
+
+#notification {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #62a764;
+  top: 20px; /* Posición desde la parte superior */
+  right: 20px; /* Posición desde el lado derecho */
+  background-color: #28a745; /* Color de fondo (verde) */
   color: #fff;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 5px;
   font-size: 1rem;
+  z-index: 9999; /* Asegura que esté encima de otros elementos */
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(-20px);
-  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.notification.visible {
+/* Notificación visible */
+#notification.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.notification.hidden {
+/* Notificación oculta */
+#notification.hidden {
   opacity: 0;
   transform: translateY(-20px);
 }
+
 
 /* boton checkput */
 
