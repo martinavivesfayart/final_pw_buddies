@@ -50,7 +50,6 @@
     display: flex; 
   }
   
-  
   .menu-toggle {
     display: none;
     cursor: pointer;
@@ -63,9 +62,6 @@
     height: 4px;
     background-color: #fff;
   }
-
-  
-  
 
   @media (max-width: 768px) {
     .nav-links {
@@ -80,20 +76,15 @@
     }
   }
   
-
-
-
 /* ========================
    Sección de Bienvenida
    ======================== */
-
 
    .welcome-section {
     background-color: #f4f4f4;
     padding: 2rem 0;
     margin-bottom: 1rem;
     margin-top: 80px; 
-
 }
 
 .welcome-section .welcome-title {
@@ -108,14 +99,12 @@
     margin-top: 0.5rem;
 }
 
-/* titulo de events */
 .events .welcome-title { 
   font-size: 2rem; 
   font-weight: bold; 
   color: #333;
 }
 
-/* de contacto */
 .welcome-title {
   font-size: 2rem;            
   font-weight: bold;            
@@ -124,65 +113,19 @@
   margin-bottom: 1rem;          
 }
 
+/* =========
+ Carrusel 
+ =========== */
 
-/* ============================
- Carrusel en la Página Home
- ============================ */
 
 .hero {
-  margin-top: 1rem; 
+  min-height: 80vh;
 }
 
-.carousel-caption h5 {
-  font-size: 2rem; 
-  font-weight: bold;
+.carousel-inner img {
+  height: 60vh; 
+  object-fit: cover; /
 }
-
-.carousel-caption p {
-  font-size: 1.25rem; 
-}
-
-
-/* ============================
-   Carrusel en Home
-============================ */
-.hero {
-  margin-top: 1rem;
-}
-
-/* Estilos para pantallas grandes */
-.carousel-caption h5 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.carousel-caption p {
-  font-size: 1.25rem;
-}
-
-/* Media Query para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-  .carousel-caption h5 {
-    font-size: 1.5rem; /* Aumenta el tamaño del título en móviles */
-  }
-
-  .carousel-caption p {
-    font-size: 1rem; /* Aumenta el tamaño del texto en móviles */
-  }
-
-  .carousel-item img {
-    height: auto;
-    max-height: 60vh; /* Limita la altura de la imagen para evitar que ocupe demasiado espacio */
-    object-fit: cover; /* Ajusta la imagen para que cubra todo el ancho */
-  }
-
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); /* Añade un fondo semi-transparente detrás del texto */
-    padding: 10px;
-    border-radius: 5px;
-  }
-}
-
 
 /* ========================
  Sección "About Us"
@@ -217,7 +160,6 @@
   color: #007BFF; 
   margin-right: 0.5rem;
 }
-
 
 /* ========================
    Estilos del Footer
@@ -505,3 +447,24 @@
   margin: 5px 0; 
 }
 
+/* ========================
+   Sección de Eventos
+   ======================== */
+
+
+.event-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.card-body .price {
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 10px;
+}
