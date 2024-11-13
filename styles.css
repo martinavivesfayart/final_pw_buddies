@@ -340,7 +340,6 @@
     padding: 4rem 0;
 }
 
-/* Información de Contacto */
 .info-item {
     display: flex;
     align-items: center;
@@ -361,8 +360,9 @@
 }
 
 
-/* CARRITOOOOOOO  */
-/* Botón flotante del carrito */
+/* ========
+   Carrito
+   =========== */
 .btn-cart-floating {
   position: fixed;
   bottom: 20px;
@@ -382,37 +382,36 @@
   background-color: #0056b3;
 }
 
-/* Estilos para la notificación de carrito */
-
+/* notificación de carrito */
 #notification {
   position: fixed;
-  top: 20px; /* Posición desde la parte superior */
-  right: 20px; /* Posición desde el lado derecho */
-  background-color: #28a745; /* Color de fondo (verde) */
+  top: 20px;
+  right: 20px; 
+  background-color: #28a745; 
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1rem;
-  z-index: 9999; /* Asegura que esté encima de otros elementos */
+  z-index: 9999; 
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Notificación visible */
 #notification.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Notificación oculta */
 #notification.hidden {
   opacity: 0;
   transform: translateY(-20px);
 }
 
 
-/* boton checkput */
+/* =================
+   Boton de Checkout
+   =================== */
 
 .modal-header {
   background-color: #4CAF50;
@@ -433,19 +432,6 @@
 }
 
 
-/* lo del subscribe */
-
-#mc_embed_signup {
-  background: #fff; 
-  padding: 20px; 
-  border-radius: 5px; 
-}
-
-#mc_embed_signup input {
-  width: 100%; 
-  padding: 10px; 
-  margin: 5px 0; 
-}
 
 /* ========================
    Sección de Eventos
